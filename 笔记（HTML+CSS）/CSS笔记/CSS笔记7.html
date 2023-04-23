@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位装饰</title>
+    <style>
+        .one{
+            background-image: url();
+            /* background-position:x y; */
+            /* x表示水平方向上的距离，y表示垂直方向上的距离 */
+            
+            background-size:width height;
+            /* background-size:宽度 高度;
+                取值可分为四种：数字+px、百分比、contain、cover */
+            /* 复合属性background:color image repeat position/size; */
+            /* background属性值的书写不分先后顺序 */
+            /* 通常background-size会单独写出 */
+
+            box-shadow:h-shadow v-shadow blur spread color inset;
+            /* box-shadow的属性值需要区分书写顺序 */
+            /* h-shadow:必选，水平偏移量，可以为负值 */
+            /* v-shadow:必选，垂直偏移量，可以为负值 */
+            /* blur:可选，模糊度 */
+            /* spread:可选，阴影扩大 */
+            /* color:可选，阴影颜色 */
+            /* inset:可选，将阴影改为内部阴影 */
+        }
+        .cs{
+            width:400px;
+            height:400px;
+            background-color: pink;
+            box-shadow:5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cs">
+        Hellow
+    </div>
+</body>
+</html>

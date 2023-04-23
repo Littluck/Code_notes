@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body{
+            perspective: 1000px;
+
+            width:100%;
+            height:100%;
+        }
+        body{
+            background:url(../image/原神背景图.jpg) no-repeat center;
+            background-size: cover;
+            text-align:center;
+        }
+        .one{
+            /* height:100%; */
+            overflow: hidden;
+            width: 677px;
+            height: 774px;
+            margin:0 auto;
+
+            background-image: url(../image/丁真.jpg);
+            background-size: contain;
+            opacity: 0;
+            animation:DJ 2s 2s;
+        }
+
+        /* 动效 */
+        .one img{
+            opacity:0;
+            transform: scale(0);
+            /* transition:all 1s; */
+            animation:dongxiao 1s backwards .1s;
+        }
+
+        /* 测试在animation下 hover能否作用 */
+        .one:hover img{
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* 结果表明：forwards存在的情况下，hover能生效 */
+
+        @keyframes dongxiao {
+            to{
+                opacity: 1;
+                transform:scale(2) rotate(720deg);
+            }
+        }
+        @keyframes DJ {
+            to{
+                transform:translateZ(800px) rotate(720deg);
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <img src="C:\Users\盲\Desktop\图片材料\woc原.gif" title="差不多得了，原神怎么你了" height="100%">`
+    </div>
+</body>
+</html>

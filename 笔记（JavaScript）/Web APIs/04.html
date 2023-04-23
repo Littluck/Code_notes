@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            letter-spacing: .5px;
+        }
+        .time{
+            width:100%;
+            height:150px;
+            background-color: pink;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width:500px;
+            height:700px;
+            margin:0 auto;
+            background-color: rgb(247, 71, 47);
+            font:700 64px 微软雅黑;
+        }
+        .main .top{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width:100%;
+            height:20%;
+        }
+        .active{
+            height:100%;
+            width:120px;
+            background-color: #151515;
+            color: #fff;
+            text-align: center;
+            line-height: 140px;
+        }
+
+
+
+
+        .father{
+            width:100px;
+            height:100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="time"></div> -->
+
+<!-- 倒计时 -->
+    <!-- <div class="main">
+        <div class="top">
+            <div class="active" data-name="hzy"></div>
+            <span>:</span>
+            <div class="active" data-name="wyy"></div>
+            <span>:</span>
+            <div class="active" data-name="lwy"></div>
+        </div>
+        <h2>下班倒计时</h2>
+        <p>21:30:00休息</p>
+    </div> -->
+<!-- 倒计时 -->
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script src="./04.js"></script>
+</body>
+</html>

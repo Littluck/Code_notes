@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+/* <!-- 随机抽奖 --> */
+        /* .main{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-evenly;
+            width:800px;
+            height:400px;
+            margin:0 auto;
+            margin-top:100px;
+            text-align:center;
+        }
+        .main .btn{
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+        button{
+            width:100px;
+            height:30px;
+            background-color: rgba(241, 241, 241, 1);
+            cursor:pointer;
+        } */
+/* <!-- 随机抽奖 --> */
+
+/* <!-- 用户输入字数 --> */
+        .book{
+            position:relative;
+            display: flex;
+            justify-content: space-between;
+            width:50%;
+            height:60px;
+            margin:0 auto;
+            margin-top:200px;
+            padding: 0 20px;
+        }
+        .public{
+            height:60px;
+            border-radius:10px;
+            border:1px solid #151515;
+            transition:all .5s;
+        }
+        .book input{
+            display: inline-block;
+            width:75%;
+            padding:0 5px;
+        }
+        .book .confirm{
+            display: inline-block;
+            width:15%;
+            background-color: skyblue;
+            line-height: 60px;
+            font-size:32px;
+            text-align:center;
+            cursor:pointer;
+        }
+        .num{
+            position:absolute;
+            bottom:-25px;
+            left:505px;
+            color:#151515;
+            font-size:12px;
+            opacity:0;
+            text-align: center;
+        }
+        .num-after{
+            opacity:1;
+        }
+        .public-after{
+            height:100px;
+        }
+        .hid{
+            display: none;
+            width:100%;
+            height:120px;
+            padding: 5px 10px;
+            margin-top:100px;
+        }
+        .comment{
+            display: flex;
+            flex-direction:column;
+            justify-content:space-around;
+            width: 100%;
+            height: 100%;
+            border-bottom:1px solid #e4e4e4;
+        }
+        .hid .comment p:nth-child(1){
+            color:rgb(255, 158, 174);
+            font:700 18px 微软雅黑;
+        }
+        .hid .comment p:nth-child(3){
+            color:#999;
+            font-size:12px
+        }
+/* <!-- 用户输入字数 --> */
+
+    </style>
+</head>
+<body>
+<!-- 随机抽奖 -->
+    <!-- <div class="main">
+        <h2>随机抽奖</h2>
+        <p>获得者是：<span></span></p>
+        <div class="btn">
+            <button>开始</button>
+            <button disabled>结束</button>
+        </div>
+    </div> -->
+<!-- 随机抽奖 -->
+
+<!-- 用户输入字数 -->
+    <div class="book">
+        <input type="text" class="public">
+        <span class="confirm public">发布</span>
+        <p class="num"></p>
+    </div>
+    <div class="hid">
+        <div class="comment">
+            <p>孙笑川</p>
+            <p></p>
+            <p>2023-03-26 20:00:00</p>
+        </div>
+    </div>
+<!-- 用户输入字数 -->
+
+    <script src="./02.js"></script>
+</body>
+</html>

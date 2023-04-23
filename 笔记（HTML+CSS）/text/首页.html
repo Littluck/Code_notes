@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下，你就知道</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+    }
+    .wrapper{
+        width:1200px;
+        margin:0 auto;
+    }
+    /* 以后写<style的第一件事就是加上
+       *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+       }> */
+    .tb{
+        height: 32px;
+        background-color: white;
+    }
+    .tb a{
+        display: inline-block;
+        width:50px;
+        text-decoration:none;
+        text-align:center;
+        line-height:32px;
+        margin:0 auto;
+        padding:6px 0px;
+        font-size:14px;
+        color:#222222;
+    }
+    .tb a:hover{
+        color:#315efb;
+    }
+    .tp{
+        text-align:center;
+        height:200px;
+        margin:133px auto;
+        margin-bottom:-12.5px;
+        margin-left: 600px;
+    }
+    .tp img{
+        /* display:inline-block; */
+        float:left;
+        height:200px
+    }
+    .sskkj{
+        height: 37px;
+        text-align:center;
+        padding: 0 400px;
+    }
+    .sskkj input{
+        float:left;
+        height: 35px;
+        width: 650px;
+        border-color: #c4c7ce;
+        border-width: 1px;
+        margin:0;
+        padding-left:5px;
+        line-height:37px;
+        vertical-align:middle;
+    }
+    .sskkj input:hover{
+        border-color:#4e6ef2;
+    }
+    .sskkj a{
+        /* display:inline-block; */
+        float:left;
+        height:35px;
+        width:105px;
+        background-color: #4e6ef2;
+        text-align:center;
+        line-height: 34.0px;
+        margin-left:-75px;
+        color:#ecf0fe;
+        text-decoration: none;
+    }
+    .sskkj a:hover{
+        background-color: #4662d9;
+    }
+    /* img不能添加高度，只能通过更改宽度来控制图片大小，改变宽度时图片会按比例缩放 */
+</style>
+<body>
+    <div class="tb">
+        <a href="#">新闻</a>
+        <a href="#">hao123</a>
+        <a href="#">地图</a>
+        <a href="#">贴吧</a>
+        <a href="#">视频</a>
+        <a href="#">图片</a>
+        <a href="#">网盘</a>
+        <a href="#">更多</a>
+    </div>
+    <div class="tp">
+        <img src="./百度.jpg">
+    </div>
+    <div class="sskkj">
+        <input type="text" placeholder="请输入关键词">
+        <a href="./HTML笔记3.html" title="搜索">百度一下</a>
+    </div>
+</body>
+</html>

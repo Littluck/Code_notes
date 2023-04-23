@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+</head>
+    <!-- 伪类选择器 -->
+    <!-- 伪元素 -->
+    <!-- 浮动：<float:left></float:left> -->
+    <!-- CSS书写顺序：浏览器执行效率更高
+            1.浮动/display
+            2.盒子模型：margin padding border 宽度高度背景色
+            3.文字样式 -->
+    <style>
+        div::after{
+            float:right;
+            color:aquamarine;
+        }
+        div::before{
+            float:left;
+            color:aliceblue;
+            
+        }
+    </style>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

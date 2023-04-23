@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table,
+        tr,
+        td{
+            border:1px solid #151115;
+        }
+        td{
+            height:40px;
+        }
+        .main{
+            width:600px;
+            margin:0 auto;
+            margin-top:50px;
+            text-align:center;
+        }
+        .main_table{
+            width:100%;
+            margin-top:30px;
+            box-shadow:3px 3px 3px;
+            border-style: initial;
+        }
+        .main_table tr:first-child{
+            background-color: rgb(221,221,221);
+        }
+        .main_table tr:not(:first-child):hover{
+            background-color: rgb(237,237,237);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>学生列表</h2>
+        <table class="main_table">
+            <tr>
+                <td>序号</td>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>家乡</td>
+            </tr>
+            <script src="./05.js"></script>
+        </table>
+    </div>
+    <script src="./05.js"></script>
+</body>
+</html>

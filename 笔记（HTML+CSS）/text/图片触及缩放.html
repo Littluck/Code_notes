@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.neisuofang{
+			width:494px;
+			height:614px;
+			background-color: pink;
+			overflow: hidden;
+		}
+
+		/* 第一种方法 */
+		/* div img{
+			width:400px;
+			transition:all 1s;
+		}
+		div:hover img{
+			width:450px;
+		} */
+
+		/* 第二中方法 */
+		div img{
+			overflow:hidden;
+			transition:all 1s;
+			opacity:0;
+		}
+		div:hover img{
+			opacity:1;
+			transform:scale(1.2)
+		}
+	</style>
+</head>
+<body>
+	<div class="neisuofang">
+		<img src="./superman/images/美国队长.jpg">
+	</div>
+</body>
+</html>

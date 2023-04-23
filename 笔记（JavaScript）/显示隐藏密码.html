@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input{
+            display: block;
+            width:500px;
+            height:35px;
+            margin:0 auto;
+            margin-top:200px;
+            border: none;
+            border-bottom:1px solid #999;
+        }
+        input:focus{
+            outline:none;
+        }
+        .eye{
+            width: 50px;
+            height:25px;
+            background-color: pink;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="password">
+    <span class="eye">$</span>
+    <script>
+        const txt = document.querySelector('input')
+        const eye = document.querySelector('.eye')
+        let flag = true
+        eye.addEventListener('click', function() {
+            if(flag === true) {
+                txt.type = 'text'
+                flag = false
+            }
+            else {
+                txt.type = 'password'
+                // 如果不给flag值的话flag就永远为false了
+                flag = true
+            }
+        })
+    </script>
+</body>
+</html>

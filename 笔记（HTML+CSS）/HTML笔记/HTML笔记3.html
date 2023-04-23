@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试下谁是你的超级英雄</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        a{
+            text-decoration:none;
+        }
+        /* div{
+            margin:0 auto;
+        }
+        这种写法是错误的，要想给图片、文字等内容居中，要对内容的父级进行text-align:center;，这样父级里的所有内容都会居中 */
+        body{
+            text-align:center;
+            background-image:url(../image/美队背景图3.jpg);
+            background-repeat:no-repeat;
+            /* backgroud-repeat的默认属性值是repeat
+               需要注意的是：background-repeat是背景图片的平铺，不是图片的平铺 */
+            background-size:1600px;
+            background-position:center center;
+            margin-top: -19px;
+            margin-bottom: 0px;
+        }
+        /* margin:0 auto;的居中是整体在外部居中，text-align:center;的居中是整体里的内容的居中
+            margin:0 auto;的生效要求需要居中的元素必须具有宽度属性 */
+        div>a:hover{
+            color:yellow;
+            background-color:black;
+        }
+        .weilei:hover{
+            background-color:rgba(0,0,255,0.5)
+        }
+        .large{
+            width:600px;
+            background-color: rgba(255,255,255,0.2);
+            height:760px;
+            margin:0 auto;
+        }
+        /* div:hover{
+            color:rgba(0,0,255,0.5)
+        } */
+        .height{
+            margin: 19px;
+            font:normal 700 32px 微软雅黑;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .kuang{
+            width:175px;
+        }
+        .juzhong{
+            margin:0 auto;
+        }
+        .ztys{
+            color: rgba(255,255,255,0.95);
+        }
+        #specially{
+            color: rgba(255,255,255,0.95);
+            font:normal 700 100px 微软雅黑;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="large">
+    <h2 class="height ztys">测测你的超级英雄是谁</h2>
+    <a href="https://item.taobao.com/item.htm?id=632149439097&ali_refid=a3_430582_1006:1343010120:N:4fnHuArIPUPVGrptD%2Fv47Ef5NqrT%2FDvG:768400e6939a643d3a9e158c6dc2a3b0&ali_trackid=162_768400e6939a643d3a9e158c6dc2a3b0&spm=a230r.1.14.1#detail" target="_blank" class="weilei">
+    <img src="https://img0.baidu.com/it/u=3041313566,3161312176&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="失败的man" title="失败的man" height="250">
+    </a>
+    <br>
+    <audio src="D:\KuGou\Ray-X - Dancing Is What to Do.mp3" autoplay controls></audio>
+    <br>
+    <div id="specially">打开音频后填写信息效率更高</div>
+    <br>
+    <form>
+        <input type="radio" name="gender" id="male"><label for="male">男</label>
+        <input type="radio" name="gender" id="female"><label for="female">女</label>
+        <input type="radio" name="gender" id="non-binary"><label for="non-binary">非二元</label>
+        <br>
+        <br>
+        <input type="text" placeholder="请输入你的学号">
+        <br>
+        <br>
+        <input type="text" placeholder="请输入你的身份证">
+        <br>
+        <br>
+        <input type="text" placeholder="请输入你的寝室号">
+        <br>
+        <br>
+        请选择你的成分：<select>
+            <option selected>请选择</option>
+            <option>原批</option>
+            <option>农批</option>
+            <option>粥批</option>
+            <option>傻批</option>
+        </select>
+        <br>
+        <br>
+        <span class="juzhong">
+        上传照片：
+        </span>
+        <span class="juzhong">
+        <input class="kuang" type="file">
+        </span>
+        <br>
+        <br>
+        <input type="submit">
+        <input type="reset">
+         <!-- input系列属性：
+            placeholder表示文本框里的提示字；
+            name表示分组；checked表示默认选中
+            multiple表示多文件选择
+            form表示
+            value表示
+        button也可以单独作为标签使用，且button是双标签。后续工作中设置按键时会更常使用button而不是input
+            button有三种属性：submit、reset、button
+        下拉选择标签为select，select的子集是option，selected表示默认选中
+        文本域标签为textarea（双标签），常见属性为cols（规定文本域的可见宽度），rows（固定了文本域的可见行数）
+            右下角可以拖拽改变大小
+        label标签可以实现点击按键周围的值即触发选中按键
+            label标签的实现有两种方法
+                1.添加id，for属性
+                2.直接用label标签包裹表单
+        字符实体：将常用字符用代码的形式表示出来，可以实现多字符的显示（如果直接在源代码上加多字符会导致显示不出）
+            最常用的是 &nvsp; 表示空格
+        -->
+    </form>
+    <br>
+    <a href="../text/跳转页面.html" target="_self" class="ztys">欲查询结果请点击此链接</a>
+    </div>
+</body>
+</html>

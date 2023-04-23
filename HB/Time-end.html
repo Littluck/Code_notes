@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>末日倒计时</title>
+    <link rel="stylesheet" href="../LiTang/CSS/base.css">
+    <link rel="shortcut icon" href="./倒计时.ico" type="image/x-icon">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(247, 71, 47);
+        }
+        .box{
+            width: 500px;
+            height: 200px;
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font:700 100px 微软雅黑;
+            background-color: rgb(49, 14, 10);
+        }
+        .time{
+            display: block;
+            width:120px;
+            height: 100%;
+            font:700 100px 微软雅黑;
+            color:#fff;
+            text-align: center;
+        }
+        .clear{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="./Happy birthday.html" class="main">
+            <spspan class="time" id="h">00</spspan>
+            <spspan class="time">:</spspan>
+            <spspan class="time" id="m">30</spspan>
+            <spspan class="time">:</spspan>
+            <spspan class="time" id="s">00</spspan>
+        </a>
+    </div>
+    <script>
+        const a = document.querySelector('.box a')
+        const sps = document.querySelectorAll('.box .main .time')
+        let i = 1800
+        let flag = true
+        const timeId = setInterval(function() {
+            i--
+            /* if(flag === true) {
+                a.preventDefault()
+            } */
+            if(i < 0) {
+                clearInterval(timeId)
+                flag = false
+                for(let i = 0; i < sps.length; i++) {
+                    sps[i].classList.add('clear')
+                }
+                a.innerHTML = '沈瑜暘 生日快乐！'
+                a.click()
+            }
+            document.querySelector('#h').innerHTML = '0' + parseInt(i / 60 / 60 % 24)
+            if(parseInt(i / 60 % 60) < 10) {
+                document.querySelector('#m').innerHTML =  '0' + parseInt(i / 60 % 60)
+            } else {
+                document.querySelector('#m').innerHTML = parseInt(i / 60 % 60)
+            }
+            if(parseInt(i % 60) < 10) {
+                document.querySelector('#s').innerHTML =  '0' + parseInt(i % 60)
+            } else {
+                document.querySelector('#s').innerHTML = parseInt(i % 60)
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

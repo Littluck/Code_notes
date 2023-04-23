@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+        @keyframes DJ {
+            from{
+                transform:translateZ(0) rotate(0);
+                opacity:0;
+            }
+            to{
+                transform:translateZ(800px) rotate(720deg);
+                opacity:1;
+            }
+        }
+        body{
+            perspective: 1000px;
+        }
+        .one{
+            width: 677px;
+            height: 774px;
+            margin:0 auto;
+
+            background-color: pink;
+            background-image: url(../image/丁真.jpg);
+            background-size: contain;
+            /* transition:all 1.5s; */
+            animation:DJ 1.5s alternate;
+            opacity: 0;
+        }
+        /* .one:hover{
+            transform:translateZ(800px) rotate(720deg);
+        } */
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+</body>
+</html>

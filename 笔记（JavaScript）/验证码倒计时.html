@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        button{
+            width:100px;
+            height:50px;
+            background-color: pink;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>获取验证码</button>
+    <script>
+        // 获取按键对象
+        const btn = document.querySelector('button')
+        // 点击事件
+        btn.addEventListener('click', function() {
+            // 开始定时器
+            btn.disabled = true
+            let i = 5
+            // 刷新页面时计时器开始启动，从开始到第一次运行函数需要1000ms(预设时间)，这就导致了第一个数打印不出来；解决方法是提前写好第一个数
+            btn.innerHTML = `${i}秒后重新获取`
+            const timeId = setInterval(function() {
+                i--
+                btn.innerHTML = `${i}秒后重新获取`
+                // 当倒计时为零时
+                if(i < 0) {
+                    clearInterval(timeId)
+                    btn.innerHTML = '获取验证码'
+                    btn.disabled = false
+                }
+            }, 1000)
+        })
+    </script>
+</body>
+</html>

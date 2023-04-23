@@ -1,0 +1,44 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+body {
+  background-color: #ededed;
+}
+footer {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  justify-content: space-around;
+  align-items: center;
+  height: 1.06666667rem;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-top: 1px solid #d2d2d2;
+}
+footer a {
+  width: 25%;
+  color: #000000;
+  text-align: center;
+  font-size: 0.29333333rem;
+}

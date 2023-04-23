@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        /* 相对定位 */
+        /* 1.不脱标-相对定位占有原来的位置
+           2.相对定位不改变标签原来的显示模式
+           3.相对定位改变的位置是以原来的位置为锚点 */
+        .one{
+            position:relative;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            /* 如果left right同时出现则left生效，top bottom同时出现则top生效 */
+        }
+
+        /* 绝对定位 */  
+        /* 1..脱标-不占用原来的位置
+           2.改变标签的显示模式特点为行内块
+           3.改变位置参考父级及以上是否有定位，如果有参考最近有定位的父级；如果都没有定位，则参考浏览器窗口 */
+        
+        .two{
+            position:absolute;
+            
+            transform: translate(-50% -50%)
+            /* 定位居中的方法 */
+            /* 子绝父相：子级使用绝对定位，父级使用相对定位 */
+            /* 如果vertical-align和line-height都无法使行内和行内文字居中，可以使用定位来实现 */
+        }
+
+        /* 固定定位 */
+        /* 1.脱标-不占用原来的位置
+           2.改变位置参考浏览器窗口
+           3.具备行内块特点*/
+        .three{
+            position:fixed;
+        }
+
+        /* 垂直位置（居中、顶部、底部） */
+        .four{
+            /* vertical-align: top/middle/bottom; */
+            vertical-align:middle;
+
+            /* vertical-align只对行内块有效
+               vertical-align对于文字内容是相对于文字的基线来调整位置 */
+        }
+        .father{
+            width:400px;
+            background-color: pink;
+        }
+        .img{
+            display:none;
+            /* 浏览器把行内和行内块标签当做文字处理，默认基线对齐 */
+            /* 解决方法有两种
+            1.display: block;
+            2.vertical-align:middle; */
+        }
+        .five{
+            visibility: hidden;
+            /* visibility:hidden;是占位隐藏 */
+            
+            display: none;
+            /* display:none;是不占位隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="./原神背景图.jpg">
+    </div>
+</body>
+</html>

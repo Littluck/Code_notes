@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .one{
+            width:800px;
+            height:500px;
+            margin:0 auto;
+            background-color: blue;
+        }
+        .one div:first-child{
+            display: inline-block;
+            float: left;
+            /* 问题原因：浮动标签本来就是行内块，再加display:inline-block;会影响解析效率 */
+            
+            width: 600px;
+            height: 37px;
+            background-color: brown;
+        }
+        .one div:last-child{
+            display: inline-block;
+            float: left;
+            /* 问题原因：浮动标签本来就是行内块，再加display:inline-block;会影响解析效率 */
+
+            width: 200px;
+            height: 37px;
+            background-color: aqua;
+        }
+        </style>
+</head>
+<body>
+    <div class="one">
+        <div>
+            <input type="text">
+        </div>
+        <div>
+            百度一下
+        </div>
+    </div>
+</body>
+</html>

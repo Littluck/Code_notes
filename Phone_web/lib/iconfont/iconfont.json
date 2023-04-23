@@ -1,0 +1,37 @@
+{
+  "id": "3955136",
+  "name": "Phone_web",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "629343",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "629366",
+      "name": "我的订单",
+      "font_class": "wodedingdan",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "630051",
+      "name": "我的聚划算",
+      "font_class": "wodejuhuasuan",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "630252",
+      "name": "消息中心",
+      "font_class": "xiaoxizhongxin",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    }
+  ]
+}

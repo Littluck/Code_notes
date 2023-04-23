@@ -1,0 +1,7 @@
+.father {
+  color: pink;
+  width: 10rem;
+}
+.father .son {
+  color: skyblue;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS练习</title>
+    <style>
+    p{
+        color:rgb(206, 7, 50)
+    }
+    .one{
+        color:blue;
+        font-size: 35px;
+        font-weight:900px;
+        font-style:italic;
+        font-family:楷体;
+        /* 复合属性--一个属性后面跟多个值的写法
+            font:style weight size family; */
+        font:normal 700 80px 宋体;
+        /* 后面的属性把前面的覆盖了 */
+        font:700 90px normal 黑体;
+        /* 复合属性的属性值顺序不分先后，因为每个属性值都有其独特的写法 */
+        /* 复合属性font可以省略style和weight，但不能省略size和family */
+    }
+    </style>
+    <!-- CSS的引入方式分为三种：外联式、内嵌式、行内式
+            其中行内式最不常用 -->
+    <!-- 选择器种类：1.标签选择器 2.类选择器 3.
+        1.标签选择器：标签选择器是选中同标签的所有内容
+        2.类选择器：所有标签都有class属性，可以通过.etc{}来定义class的属性值，再对添加了class属性的标签赋予相应的内容
+            一个标签可以使用多个类名，在class中需要用space隔开
+        3.id选择器：格式同类选择器，通过#etc{}定义id的属性值
+            需要注意的是一个id只能用一次
+        4.通配符选择器：可以理解为将标签全部选中
+            一般用于去除标签默认的margin和padding
+         -->
+    <!--  -->
+    <!-- 层叠性：后面的属性覆盖前面的属性
+            例：p{
+                color:red;
+                color:blue;
+            } 
+            最后显示的是蓝色-->
+</head>
+<body>
+    <h1>Hi! How about you</h1>
+    <p>Hello!</p>
+    <div class="one two">&nbsp;&nbsp;I'm fine! what's up</div>
+    <p class=""></p class="">
+    <p class=""></p class="">
+    <p class=""></p class="">
+    <p class=""></p class="">
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        .list {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .item {
+        width: 240px;
+        margin-left: 10px;
+        padding: 20px 30px;
+        transition: all .5s;
+        margin-bottom: 20px;
+        }
+
+        .item:nth-child(4n) {
+        margin-left: 0;
+        }
+
+        .item:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        transform: translate3d(0, -4px, 0);
+        cursor: pointer;
+        }
+
+        .item img {
+        width: 100%;
+        }
+
+        .item .name {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #666;
+        }
+
+        .item .price {
+        font-size: 22px;
+        color: firebrick;
+        }
+
+        .item .price::before {
+        content: "¥";
+        font-size: 14px;
+        }
+
+        .filter {
+        display: flex;
+        width: 990px;
+        margin: 0 auto;
+        padding: 50px 30px;
+        }
+
+        .filter a {
+        padding: 10px 20px;
+        background: #f5f5f5;
+        color: #666;
+        text-decoration: none;
+        margin-right: 20px;
+        }
+
+        .filter a:active,
+        .filter a:focus {
+        background: #05943c;
+        color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter">
+        <a data-index="1" href="javascript:;">0-100元</a>
+        <a data-index="2" href="javascript:;">100-300元</a>
+        <a data-index="3" href="javascript:;">300元以上</a>
+        <a href="javascript:;">全部区间</a>
+      </div>
+      <div class="list">
+        <!-- <div class="item">
+          <img src="" alt="">
+          <p class="name"></p>
+          <p class="price"></p>
+        </div> -->
+      </div>
+      <script src="./价格筛选.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    li{
+        list-style:none;
+    }
+    a{
+        text-decoration:none;
+    }
+        /*复合属性border
+            属性值的书写不分先后顺序
+            线条种类：soild(实线) dashed(虚线) dotted(点线)
+            div{
+            border: weight color 线条的种类;
+            } 
+        */
+    body{
+        background-color: #f3f5f7;
+    }
+    .xl{
+        /* float:left; */
+        height:40px;
+        border-top:3px solid #ff8500;
+        margin:10px 16px;
+    }
+        /* 复合属性padding（margin的性质完全同padding）
+            属性值书写需要区分先后顺序
+            padding最多为四个属性值，顺序按顺时针计算，如果少值，看对面
+            div{
+                padding:top(上) right(右) bottom(下) left(左)
+            } */
+        /* list-style:none;可以用于去掉有序/无序列表前的点或数字 */
+        /* 如果想通过margin和padding改变行内标签（span等）的垂直位置，无法生效，可以通过line-height来实现垂直位置的改变
+           行内标签的margin-top margin-bottom padding-top padding-bottom 都无法生效 */
+    .xl li{
+        float:left;
+        margin:5px 0px;
+        padding-left:10px;
+    }
+    .xl li a{
+        display: block;
+        width:80px;
+        height:40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .xl li a:hover{
+        background-color: #fff;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="xl">
+        <ul>
+            <li><a href="#">新浪导航</a></li>
+            <li><a href="#">新浪导航</a></li>
+            <li><a href="#">新浪导航</a></li>
+            <li><a href="#">新浪导航</a></li>
+        </ul>
+    </div>
+</body>
+</html>

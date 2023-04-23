@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>祝沈瑜暘 生日快乐！</title>
+    <link rel="stylesheet" href="../LiTang/CSS/base.css">
+    <link rel="shortcut icon" href="./JL.ico" type="image/x-icon">
+    <style>
+         body{
+            position: relative;
+            background-image: url(./images/向晚.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        .main{
+            width: 600px;
+            height: 200px;
+            margin:0 auto;
+            padding-top: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font:700 64px 微软雅黑;
+        }
+        .main a{
+            color:rgb(210, 124, 91)
+        }
+        .pic{
+            position: absolute;
+            width:50%;
+            height:100%;
+            
+        }
+        .one{
+            background-image: url(./images/右.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .two{
+            right:0;
+            background-image: url(./images/左.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body:hover .one{
+            transform: translate(-100%, 0);
+            transition:all 1s;
+        }
+        body:hover .two{
+            transform: translate(100%, 0);
+            transition:all 1s;
+        }
+        body:hover .top{
+            display: none;
+        }
+        body:hover .bottom{
+            opacity: 1;
+            transition: all 1s;
+        }
+        .small{
+            transform: scale(.3);
+        }
+        .top{
+            width: 500px;
+            height: 200px;
+            transform: translate(0, -270px);
+            margin: 0 auto;
+            padding-top: 110px;
+            font:700 120px 楷体;
+            text-align: center;
+            color: #151515;
+        }
+        .bottom{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 800px;
+            height: 200px;
+            padding-left: 50px;
+            margin: 0 auto;
+            margin-left: -350px;
+            margin-top: -100px;
+            font:700 150px 楷体;
+            text-align: center;
+            color: rgb(245,254,179);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic one"></div>
+    <div class="pic two"></div>
+    <div class="main">
+        <a href="https://www.bilibili.com/video/BV19T4y1F7U6/?spm_id_from=333.999.0.0&vd_source=5ad82c826e4c32f9e28ec7173f417c46">查看你的生日祝福</a>
+    </div>
+    <div class="top">
+        <p>祝沈瑜暘</p>
+    </div>
+    <div class="bottom">
+        <p>生日快乐！</p>
+    </div>
+    <script>
+        const top = document.querySelector('.top h1')
+        const bottom = document.querySelector('.bottom h1')
+        let flag = true
+        let i = 1
+        setInterval(function() {
+            i++
+            if(i % 2 === 0) {
+                top.classList.remove('small')
+                bottom.classList.remove('small')
+            } else {
+                top.classList.add('small')
+                bottom.classList.add('small')
+            }
+        }, 1000)
+    </script>
+</body>
+</html>
